@@ -29,4 +29,4 @@ Compare a trained checkpoint with the initial zero-output controller using a two
 uv run --no-sync --extra rocm python evaluate_go2.py runs/go2/latest.pt --steps 100
 ```
 
-Evaluation uses Genesis's forward-only rigid solver, which can differ from the differentiable solver used in training. The two environments use the same initial pose and command, and the policy's normalized time observation is held at 1 after the 32-step training horizon. See `results/go2-first/README.md` for the observed results and numerical failures.
+Evaluation uses Genesis's forward-only rigid solver, which can differ from the differentiable solver used in training. The two environments use the same initial pose and command, and the policy's normalized time observation is held at 1 after the 32-step training horizon. See `results/go2-1khz-50hz/README.md` for the 1 kHz results and `results/go2-first/README.md` for the earlier run.

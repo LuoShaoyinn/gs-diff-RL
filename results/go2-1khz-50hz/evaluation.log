@@ -1,0 +1,21 @@
+[38;5;226m[Genesis] [03:02:24] [WARNING] Neutral robot position (qpos0) exceeds joint limits.[0m
+{"step": 20, "time_s": 0.4, "x": [-0.0351591631770134, 0.07359983026981354], "height": [0.23950448632240295, 0.2723364531993866], "vx": [-0.23437055945396423, 0.40764379501342773], "min_height": [0.23566855490207672, 0.26851126551628113], "order": ["zero_output", "trained"]}
+Traceback (most recent call last):
+  File "/home/luoshaoyinn/workspace/gs-diff-RL/evaluate_go2.py", line 59, in <module>
+    main()
+  File "/home/luoshaoyinn/workspace/gs-diff-RL/evaluate_go2.py", line 48, in main
+    scene.step()
+  File "/home/luoshaoyinn/workspace/gs-diff-genesis/genesis/utils/misc.py", line 166, in wrapper
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoshaoyinn/workspace/gs-diff-genesis/genesis/engine/scene.py", line 1087, in step
+    self._sim.step()
+  File "/home/luoshaoyinn/workspace/gs-diff-genesis/genesis/engine/simulator.py", line 407, in step
+    self.rigid_solver.check_errno()
+  File "/home/luoshaoyinn/workspace/gs-diff-genesis/genesis/engine/solvers/rigid/rigid_solver.py", line 1426, in check_errno
+    gs.raise_exception("Invalid constraint forces causing 'nan'. Please decrease Rigid simulation timestep.")
+  File "/home/luoshaoyinn/workspace/gs-diff-genesis/genesis/utils/misc.py", line 40, in raise_exception
+    raise gs.GenesisException(msg)
+genesis.GenesisException: Invalid constraint forces causing 'nan'. Please decrease Rigid simulation timestep.
+
+[38;5;9m[Genesis] [03:02:44] [ERROR] GenesisException: Invalid constraint forces causing 'nan'. Please decrease Rigid simulation timestep.[0m
