@@ -22,7 +22,7 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(args.seed)
-    gs.init(backend=gs.gpu, precision='32', logging_level='warning')
+    gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
     scene = gs.Scene(
         sim_options=gs.options.SimOptions(dt=0.01, substeps=2, requires_grad=True),
         rigid_options=gs.options.RigidOptions(enable_collision=True),
