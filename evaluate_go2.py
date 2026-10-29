@@ -10,13 +10,16 @@ from torch import nn
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('checkpoint')
-    p.add_argument('--steps', type=int, default=200)
-    p.add_argument('--substeps', type=int, default=4)
+    p.add_argument('--steps', type=int, default=100)
+    p.add_argument('--substeps', type=int, default=None)
+    p.add_argument('--control-dt', type=float, default=None)
     p.add_argument('--command', type=float, default=0.4)
     args = p.parse_args()
     ckpt = torch.load(args.checkpoint, map_location='cpu', weights_only=False)
+    control_dt = args.control_dt if args.control_dt is not None else ckpt['args'].get('control_dt', 0.01)
+    substeps = args.substeps if args.substeps is not None else ckpt['args'].get('substeps', 2)
     gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
-    scene = gs.Scene(sim_options=gs.options.SimOptions(dt=.01, substeps=args.substeps), show_viewer=False)
+    scene = gs.Scene(sim_options=gs.options.SimOptions(dt=control_dt, substeps=substeps), show_viewer=False)
     scene.add_entity(gs.morphs.Plane())
     robot = scene.add_entity(gs.morphs.URDF(file='urdf/go2/urdf/go2.urdf', pos=(0, 0, .42)))
     scene.build(n_envs=2)
@@ -46,7 +49,7 @@ def main():
             state = scene.rigid_solver.get_state()
             minimum = torch.minimum(minimum, state.qpos[:, 2])
             if (step + 1) % 20 == 0 or step == args.steps - 1:
-                print(json.dumps({'step': step + 1, 'time_s': (step + 1) * .01,
+                print(json.dumps({'step': step + 1, 'time_s': (step + 1) * control_dt,
                                   'x': state.qpos[:, 0].tolist(), 'height': state.qpos[:, 2].tolist(),
                                   'vx': state.dofs_vel[:, 0].tolist(), 'min_height': minimum.tolist(),
                                   'order': ['zero_output', 'trained']}), flush=True)

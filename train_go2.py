@@ -14,6 +14,8 @@ def main():
     p.add_argument('--iterations', type=int, default=100)
     p.add_argument('--envs', type=int, default=8)
     p.add_argument('--horizon', type=int, default=32)
+    p.add_argument('--control-dt', type=float, default=0.02)
+    p.add_argument('--substeps', type=int, default=20)
     p.add_argument('--seed', type=int, default=42)
     p.add_argument('--lr', type=float, default=0.001)
     p.add_argument('--out', default='runs/go2')
@@ -23,7 +25,7 @@ def main():
     torch.manual_seed(args.seed)
     gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
     scene = gs.Scene(
-        sim_options=gs.options.SimOptions(dt=0.01, substeps=2, requires_grad=True),
+        sim_options=gs.options.SimOptions(dt=args.control_dt, substeps=args.substeps, requires_grad=True),
         rigid_options=gs.options.RigidOptions(enable_collision=True),
         show_viewer=False,
     )
