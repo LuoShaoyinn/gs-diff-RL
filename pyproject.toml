@@ -1,0 +1,19 @@
+[project]
+name = "gs-diff-rl"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["torch", "quadrants==1.3.3", "genesis-world", "setuptools<80"]
+
+[project.optional-dependencies]
+rocm = ["torch", "triton"]
+
+[tool.uv.sources]
+genesis-world = { git = "https://github.com/LuoShaoyinn/genesis-world.git", rev = "2f5b530582d06241947f640fc2bb2e842ddbd8c4" }
+torch = [{ index = "rocm724", extra = "rocm" }]
+triton = [{ index = "rocm724", extra = "rocm" }]
+
+[[tool.uv.index]]
+name = "rocm724"
+url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.4/"
+format = "flat"
+explicit = true
