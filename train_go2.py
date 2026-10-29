@@ -35,7 +35,7 @@ def main():
     dofs = [robot.get_joint(name).dof_start for name in names]
     default = torch.tensor([0, .8, -1.5, 0, .8, -1.5, 0, 1., -1.5, 0, 1., -1.5], device=gs.device)
     qpos = torch.tensor([0, 0, .42, 1, 0, 0, 0] + default.tolist(), device=gs.device).repeat(args.envs, 1)
-    policy = nn.Sequential(nn.Linear(39, 64), nn.Tanh(), nn.Linear(64, 64), nn.Tanh(), nn.Linear(64, 12)).to(gs.device)
+    policy = nn.Sequential(nn.Linear(38, 64), nn.Tanh(), nn.Linear(64, 64), nn.Tanh(), nn.Linear(64, 12)).to(gs.device)
     nn.init.zeros_(policy[-1].weight)
     nn.init.zeros_(policy[-1].bias)
     optim = torch.optim.Adam(policy.parameters(), lr=args.lr)
