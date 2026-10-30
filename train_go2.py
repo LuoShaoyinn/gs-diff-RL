@@ -19,6 +19,7 @@ def main():
     p.add_argument('--seed', type=int, default=42)
     p.add_argument('--lr', type=float, default=0.001)
     p.add_argument('--out', default='runs/go2')
+    p.add_argument('--resume', help='Continue policy and optimizer from a checkpoint')
     args = p.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -40,10 +41,19 @@ def main():
     nn.init.zeros_(policy[-1].weight)
     nn.init.zeros_(policy[-1].bias)
     optim = torch.optim.Adam(policy.parameters(), lr=args.lr)
+    start_iteration = 0
+    if args.resume:
+        checkpoint = torch.load(args.resume, map_location=gs.device, weights_only=False)
+        for key in ('envs', 'horizon', 'control_dt', 'substeps'):
+            if checkpoint['args'].get(key) != getattr(args, key):
+                raise ValueError(f'resume requires matching {key}: {checkpoint["args"].get(key)} != {getattr(args, key)}')
+        policy.load_state_dict(checkpoint['policy'])
+        optim.load_state_dict(checkpoint['optimizer'])
+        start_iteration = checkpoint['iteration'] + 1
     print(json.dumps({'config': vars(args), 'device': str(gs.device), 'torch': torch.__version__, 'hip': torch.version.hip, 'genesis': gs.__version__}), flush=True)
     start = time.time()
     with (out / 'metrics.jsonl').open('w') as log:
-        for iteration in range(args.iterations):
+        for iteration in range(start_iteration, start_iteration + args.iterations):
             scene.reset()
             robot.set_qpos(qpos, zero_velocity=True)
             command = torch.linspace(0.2, 0.6, args.envs, device=gs.device).unsqueeze(-1)
