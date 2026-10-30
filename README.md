@@ -30,3 +30,14 @@ uv run --no-sync --extra rocm python evaluate_go2.py runs/go2/latest.pt --steps 
 ```
 
 Evaluation uses Genesis's forward-only rigid solver, which can differ from the differentiable solver used in training. The two environments use the same initial pose and command, and the policy's normalized time observation is held at 1 after the 32-step training horizon. See `results/go2-1khz-50hz/README.md` for the 1 kHz results and `results/go2-first/README.md` for the earlier run.
+
+## Short-horizon actor-critic experiment
+
+`train_shac_go2.py` adapts Open-DiffLoco's smooth reference-free reward components to Genesis with 50 Hz control and 20 physics substeps. A frozen target critic bootstraps a 16-step pathwise actor objective; the critic fits discounted segment returns. States are carried between segments as detached generalized positions and velocities, and low or tilted robots reset at segment boundaries. This is a small independent SHAC-inspired experiment, not a reproduction of Open-DiffLoco: it uses Genesis, a smaller batch, a simplified command range, no action noise, and no lambda-return critic target. It also reconstructs simulator state at each boundary rather than retaining internal contact/warmstart state. The original Genesis solver is unchanged.
+
+```sh
+uv run --no-sync --extra rocm python train_shac_go2.py --iterations 100 --envs 16 --horizon 16
+uv run --no-sync --extra rocm python evaluate_shac_go2.py runs/go2-shac/latest.pt --steps 250
+```
+
+The evaluation uses the forward-only solver, compares the trained controller with a zero-output controller at 0.4 m/s, and logs their base position, velocity, and height. Training checkpoints include optimizer and rollout state but this script does not yet resume them.
