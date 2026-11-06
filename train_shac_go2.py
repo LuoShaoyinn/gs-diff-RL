@@ -15,19 +15,22 @@ def main():
     parser.add_argument('--envs', type=int, default=16)
     parser.add_argument('--horizon', type=int, default=16)
     parser.add_argument('--seed', type=int, default=42)
+    parser.add_argument('--backend', choices=['cuda', 'amdgpu'], default='cuda')
     parser.add_argument('--out', default='runs/go2-shac')
     args = parser.parse_args()
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(args.seed)
-    gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
+    gs.init(backend=getattr(gs, args.backend), precision='32', logging_level='warning')
     scene = gs.Scene(sim_options=gs.options.SimOptions(dt=.02, substeps=20, requires_grad=True), show_viewer=False)
     scene.add_entity(gs.morphs.Plane())
     robot = scene.add_entity(gs.morphs.URDF(file='urdf/go2/urdf/go2.urdf', pos=(0, 0, .42)))
     scene.build(n_envs=args.envs)
     names = [f'{leg}_{part}_joint' for leg in ('FR','FL','RR','RL') for part in ('hip','thigh','calf')]
     dofs = [robot.get_joint(name).dof_start for name in names]
+    q_indices = [robot.get_joint(name).q_start for name in names]
     default = torch.tensor([0,.8,-1.5,0,.8,-1.5,0,1.,-1.5,0,1.,-1.5], device=gs.device)
     initial_q = torch.tensor([0,0,.42,1,0,0,0]+default.tolist(), device=gs.device).repeat(args.envs,1)
+    initial_q[:, q_indices] = default
     q, v = initial_q.clone(), torch.zeros(args.envs,18,device=gs.device)
     previous = torch.zeros(args.envs,12,device=gs.device)
     command = torch.empty(args.envs,1,device=gs.device).uniform_(.2,.6)
@@ -58,7 +61,7 @@ def main():
             for t in range(args.horizon):
                 state=scene.rigid_solver.get_state(); q,v=state.qpos,state.dofs_vel
                 ob=obs(q,v,previous,command); act=torch.tanh(actor(ob))*.25
-                torque=20*(default+act-q[:,7:])-.5*v[:,6:]
+                torque=20*(default+act-q[:,q_indices])-.5*v[:,dofs]
                 robot.control_dofs_force(torque,dofs); scene.step()
                 state=scene.rigid_solver.get_state(); q,v=state.qpos,state.dofs_vel
                 observations.append(ob.detach()); rewards.append(reward(q,v,act,previous,command)); previous=act
@@ -94,7 +97,8 @@ def main():
             print(json.dumps(rec),flush=True); log.write(json.dumps(rec)+'\n'); log.flush()
             torch.save({'actor':actor.state_dict(),'critic':critic.state_dict(),'target':target.state_dict(),
                         'actor_optimizer':actor_opt.state_dict(),'critic_optimizer':critic_opt.state_dict(),
-                        'q':q,'v':v,'previous':previous,'command':command,'age':age,'iteration':it,'args':vars(args)},out/'latest.pt')
+                        'q':q,'v':v,'previous':previous,'command':command,'age':age,'iteration':it,'args':vars(args),
+                        'controller_version':'named_pd_v1'},out/'latest.pt')
 
 
 if __name__=='__main__': main()

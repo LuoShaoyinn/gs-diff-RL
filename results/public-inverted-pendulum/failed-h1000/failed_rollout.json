@@ -1,0 +1,20 @@
+{
+  "iteration": 7,
+  "completed_rollouts": [],
+  "state_cost": 3.2905103580560535e-05,
+  "error": "Nan grad in qpos or dofs_vel found at step 818",
+  "policy": {
+    "feedback.weight": [
+      [
+        0.84776771068573,
+        5.107956409454346,
+        0.9723866581916809,
+        0.7985743880271912
+      ]
+    ],
+    "feedback.bias": [
+      0.008101212792098522
+    ]
+  },
+  "reset_seed": 49
+}

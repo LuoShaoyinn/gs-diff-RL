@@ -1,0 +1,14 @@
+Resolved 130 packages in 5ms
+Checked 112 packages in 1.31s
+[38;5;226m[Genesis] [02:40:55] [WARNING] Neutral robot position (qpos0) exceeds joint limits.[0m
+{"config": {"iterations": 10, "envs": 8, "horizon": 32, "control_dt": 0.02, "substeps": 20, "seed": 42, "lr": 0.001, "backend": "cuda", "out": "runs/go2-named-pd-public", "resume": null}, "device": "cuda:0", "torch": "2.14.1+cu130", "hip": null, "genesis": "1.4.5"}
+{"iteration": 0, "loss": 0.38532230257987976, "grad_norm": 0.5414247512817383, "forward_velocity": -0.14435134828090668, "height": 0.31022217869758606, "elapsed_s": 26.83325481414795}
+{"iteration": 1, "loss": 0.3764822483062744, "grad_norm": 0.5335619449615479, "forward_velocity": -0.14175748825073242, "height": 0.31091582775115967, "elapsed_s": 30.79154896736145}
+{"iteration": 2, "loss": 0.3666590452194214, "grad_norm": 0.5318066477775574, "forward_velocity": -0.1395069658756256, "height": 0.31170421838760376, "elapsed_s": 34.63148236274719}
+{"iteration": 3, "loss": 0.3556601107120514, "grad_norm": 0.5333101153373718, "forward_velocity": -0.1377677619457245, "height": 0.3126538395881653, "elapsed_s": 38.46091318130493}
+{"iteration": 4, "loss": 0.3425983488559723, "grad_norm": 0.5432388782501221, "forward_velocity": -0.1368030607700348, "height": 0.31363609433174133, "elapsed_s": 42.29130268096924}
+{"iteration": 5, "loss": 0.32935836911201477, "grad_norm": 0.554794192314148, "forward_velocity": -0.13515913486480713, "height": 0.31461429595947266, "elapsed_s": 46.11945033073425}
+{"iteration": 6, "loss": 0.3151175379753113, "grad_norm": 0.5486335158348083, "forward_velocity": -0.13349664211273193, "height": 0.31555789709091187, "elapsed_s": 49.9969687461853}
+{"iteration": 7, "loss": 0.29965364933013916, "grad_norm": 0.5455335378646851, "forward_velocity": -0.13224777579307556, "height": 0.3163819909095764, "elapsed_s": 53.82334494590759}
+{"iteration": 8, "loss": 0.28382113575935364, "grad_norm": 0.5459066033363342, "forward_velocity": -0.13109539449214935, "height": 0.31704461574554443, "elapsed_s": 57.648608446121216}
+{"iteration": 9, "loss": 0.2676891088485718, "grad_norm": 0.5306512117385864, "forward_velocity": -0.12846460938453674, "height": 0.31740009784698486, "elapsed_s": 61.479517221450806}

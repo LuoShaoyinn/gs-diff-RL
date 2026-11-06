@@ -18,13 +18,14 @@ def main():
     p.add_argument('--substeps', type=int, default=20)
     p.add_argument('--seed', type=int, default=42)
     p.add_argument('--lr', type=float, default=0.001)
+    p.add_argument('--backend', choices=['cuda', 'amdgpu'], default='cuda')
     p.add_argument('--out', default='runs/go2')
     p.add_argument('--resume', help='Continue policy and optimizer from a checkpoint')
     args = p.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(args.seed)
-    gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
+    gs.init(backend=getattr(gs, args.backend), precision='32', logging_level='warning')
     scene = gs.Scene(
         sim_options=gs.options.SimOptions(dt=args.control_dt, substeps=args.substeps, requires_grad=True),
         rigid_options=gs.options.RigidOptions(enable_collision=True),
@@ -35,8 +36,10 @@ def main():
     scene.build(n_envs=args.envs)
     names = [f'{leg}_{part}_joint' for leg in ('FR', 'FL', 'RR', 'RL') for part in ('hip', 'thigh', 'calf')]
     dofs = [robot.get_joint(name).dof_start for name in names]
+    q_indices = [robot.get_joint(name).q_start for name in names]
     default = torch.tensor([0, .8, -1.5, 0, .8, -1.5, 0, 1., -1.5, 0, 1., -1.5], device=gs.device)
     qpos = torch.tensor([0, 0, .42, 1, 0, 0, 0] + default.tolist(), device=gs.device).repeat(args.envs, 1)
+    qpos[:, q_indices] = default
     policy = nn.Sequential(nn.Linear(38, 64), nn.Tanh(), nn.Linear(64, 64), nn.Tanh(), nn.Linear(64, 12)).to(gs.device)
     nn.init.zeros_(policy[-1].weight)
     nn.init.zeros_(policy[-1].bias)
@@ -44,6 +47,8 @@ def main():
     start_iteration = 0
     if args.resume:
         checkpoint = torch.load(args.resume, map_location=gs.device, weights_only=False)
+        if checkpoint.get('controller_version') != 'named_pd_v1':
+            raise ValueError('Legacy checkpoint used cross-wired PD feedback; start a new training run')
         for key in ('envs', 'horizon', 'control_dt', 'substeps'):
             if checkpoint['args'].get(key) != getattr(args, key):
                 raise ValueError(f'resume requires matching {key}: {checkpoint["args"].get(key)} != {getattr(args, key)}')
@@ -66,7 +71,9 @@ def main():
                                  torch.full_like(command, step / args.horizon), pos[:, 2:3],
                                  torch.ones_like(command)), dim=-1)
                 action = torch.tanh(policy(obs)) * 0.25
-                torque = 20 * (default + action - joint_pos) - 0.5 * joint_vel
+                # Observations retain raw simulator order; feedback must match the
+                # named action/control order (FR, FL, RR, RL).
+                torque = 20 * (default + action - pos[:, q_indices]) - 0.5 * vel[:, dofs]
                 robot.control_dofs_force(torque, dofs)
                 scene.step()
                 state = scene.rigid_solver.get_state()
@@ -84,7 +91,8 @@ def main():
             print(json.dumps(record), flush=True)
             log.write(json.dumps(record) + '\n')
             log.flush()
-            torch.save({'policy': policy.state_dict(), 'optimizer': optim.state_dict(), 'iteration': iteration, 'args': vars(args)}, out / 'latest.pt')
+            torch.save({'policy': policy.state_dict(), 'optimizer': optim.state_dict(), 'iteration': iteration,
+                        'args': vars(args), 'controller_version': 'named_pd_v1'}, out / 'latest.pt')
 
 
 if __name__ == '__main__':

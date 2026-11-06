@@ -1,0 +1,60 @@
+{
+  "host": "15004-2x-4090",
+  "reset_audit": {
+    "ip-matched-h64-seed42": {
+      "environments": 64,
+      "unique_states": 64,
+      "max_requested_vs_observed_error": 0.0,
+      "min_by_coordinate": [
+        -0.009721274487674236,
+        -0.009567758068442345,
+        -0.00964326411485672,
+        -0.009852754883468151
+      ],
+      "max_by_coordinate": [
+        0.009324638172984123,
+        0.009847511537373066,
+        0.00941396038979292,
+        0.00938352756202221
+      ]
+    },
+    "ip-matched-h128-seed42": {
+      "environments": 64,
+      "unique_states": 64,
+      "max_requested_vs_observed_error": 0.0,
+      "min_by_coordinate": [
+        -0.00913808960467577,
+        -0.009766489267349243,
+        -0.009858570992946625,
+        -0.009939152747392654
+      ],
+      "max_by_coordinate": [
+        0.009899024851620197,
+        0.009831978008151054,
+        0.009925464168190956,
+        0.009696501307189465
+      ]
+    }
+  },
+  "checkpoint_sha256": "72217f7ac25369b38972bf76e69f49c627e4e36b3bec5ed79ccd1839b712a588",
+  "independent_evaluation": {
+    "environment": "InvertedPendulum-v5",
+    "episodes": 100,
+    "mean_return": 1000.0,
+    "min_return": 1000.0,
+    "successes": 100,
+    "checkpoint": "/home/luoshaoyinn/diskstation/gs-diff-RL/runs/ip-matched-h128-seed42/latest.pt",
+    "iteration": 6,
+    "first_seed": 20000,
+    "last_seed": 20099,
+    "terminated_episodes": 0,
+    "time_limit_episodes": 100
+  },
+  "video": {
+    "frames": 1000,
+    "fps": 25.0,
+    "duration_s": 40.0,
+    "width": 640,
+    "height": 480
+  }
+}

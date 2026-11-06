@@ -14,17 +14,20 @@ def main():
     p.add_argument('--substeps', type=int, default=None)
     p.add_argument('--control-dt', type=float, default=None)
     p.add_argument('--command', type=float, default=0.4)
+    p.add_argument('--backend', choices=['cuda', 'amdgpu'], default='cuda')
+    p.add_argument('--legacy-pd', action='store_true', help='Reproduce the old cross-wired PD controller')
     args = p.parse_args()
     ckpt = torch.load(args.checkpoint, map_location='cpu', weights_only=False)
     control_dt = args.control_dt if args.control_dt is not None else ckpt['args'].get('control_dt', 0.01)
     substeps = args.substeps if args.substeps is not None else ckpt['args'].get('substeps', 2)
-    gs.init(backend=gs.amdgpu, precision='32', logging_level='warning')
+    gs.init(backend=getattr(gs, args.backend), precision='32', logging_level='warning')
     scene = gs.Scene(sim_options=gs.options.SimOptions(dt=control_dt, substeps=substeps), show_viewer=False)
     scene.add_entity(gs.morphs.Plane())
     robot = scene.add_entity(gs.morphs.URDF(file='urdf/go2/urdf/go2.urdf', pos=(0, 0, .42)))
     scene.build(n_envs=2)
     names = [f'{leg}_{part}_joint' for leg in ('FR', 'FL', 'RR', 'RL') for part in ('hip', 'thigh', 'calf')]
     dofs = [robot.get_joint(name).dof_start for name in names]
+    q_indices = [robot.get_joint(name).q_start for name in names]
     default = torch.tensor([0, .8, -1.5, 0, .8, -1.5, 0, 1., -1.5, 0, 1., -1.5], device=gs.device)
     qpos = torch.tensor([0, 0, .42, 1, 0, 0, 0] + default.tolist(), device=gs.device).repeat(2, 1)
     robot.set_qpos(qpos, zero_velocity=True)
@@ -43,7 +46,9 @@ def main():
                              phase, pos[:, 2:3], torch.ones_like(command)), dim=-1)
             action = torch.tanh(policy(obs)) * .25
             action[0] = 0  # initial controller; environment 1 uses the trained policy
-            torque = 20 * (default + action - joint_pos) - .5 * joint_vel
+            pd_pos = joint_pos if args.legacy_pd else pos[:, q_indices]
+            pd_vel = joint_vel if args.legacy_pd else vel[:, dofs]
+            torque = 20 * (default + action - pd_pos) - .5 * pd_vel
             robot.control_dofs_force(torque, dofs)
             scene.step()
             state = scene.rigid_solver.get_state()
@@ -52,7 +57,8 @@ def main():
                 print(json.dumps({'step': step + 1, 'time_s': (step + 1) * control_dt,
                                   'x': state.qpos[:, 0].tolist(), 'height': state.qpos[:, 2].tolist(),
                                   'vx': state.dofs_vel[:, 0].tolist(), 'min_height': minimum.tolist(),
-                                  'order': ['zero_output', 'trained']}), flush=True)
+                                  'order': ['zero_output', 'trained'],
+                                  'controller': 'legacy' if args.legacy_pd else 'named_pd_v1'}), flush=True)
 
 
 if __name__ == '__main__':

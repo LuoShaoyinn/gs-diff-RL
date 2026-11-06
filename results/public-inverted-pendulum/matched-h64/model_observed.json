@@ -1,0 +1,20 @@
+{
+  "armature": [
+    0.0,
+    0.0
+  ],
+  "damping": [
+    1.0,
+    1.0
+  ],
+  "force_range": [
+    [
+      -300.0,
+      -Infinity
+    ],
+    [
+      300.0,
+      Infinity
+    ]
+  ]
+}
