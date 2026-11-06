@@ -46,9 +46,14 @@ The actor is trainable affine feedback followed by tanh, initialized to zero
 output on a fresh run. It learns from randomized resets and a smooth state-only balancing cost.
 Every policy gradient goes through Genesis; there is no critic, PPO, learned
 dynamics, imitation data, or detach within a rollout. The horizons are 2.56 and
-5.12 seconds; evaluation lasts 40 seconds. A separate attempt to differentiate
-all 1,000 steps failed with a NaN gradient on the balanced policy's first
-backward pass. This reproduction does **not** claim full-episode gradients.
+5.12 seconds; evaluation lasts 40 seconds. A separate 1,000-step backward pass
+initially failed because Genesis's long checkpoint replay drifted away from
+the recorded trajectory. Setting `--horizon 1000 --checkpoint-steps 25` keeps
+replay intervals short while retaining full gradients across all 1,000 steps.
+The previously failing calculation now completes with finite gradients on
+public Genesis. See the [replay diagnosis](results/nan-backward-20261106/README.md).
+The saved trained policy still comes from the 64/128-step curriculum; the
+1,000-step diagnostic makes no optimizer update.
 Genesis's default added rotor inertia is explicitly set
 to zero to preserve the benchmark XML's armature.
 

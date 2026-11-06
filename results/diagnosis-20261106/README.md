@@ -142,8 +142,14 @@ forward state cost was finite (`3.29051e-5`); Genesis reported a NaN gradient at
 reverse step 818. The [saved failing candidate](../public-inverted-pendulum/failed-h1000/failed_rollout.json)
 is exactly the successful policy, with reset seed 49. A finite forward rollout
 and successful evaluation therefore do not guarantee a usable long-rollout
-gradient on this public CUDA configuration. The internal numerical cause has
-not been isolated, and no simulator patch or replacement gradient was used.
+gradient on this public CUDA configuration. The subsequent
+[checkpoint-replay investigation](../nan-backward-20261106/README.md) isolates
+the cause: roundoff-scale discrepancies grow during the 1,000-step open-loop
+reconstruction used for backward, so its simulated states differ substantially
+from the original feedback trajectory. The same full backward calculation
+completes with finite gradients using 25-step checkpoint intervals. This uses
+the public `substeps_local` option without a simulator patch, replacement
+gradient, or detach at checkpoint boundaries.
 
 ## Relevant papers
 

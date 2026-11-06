@@ -1,0 +1,16 @@
+{"step": 1000, "kind": "observation", "max_finite_abs": 5.209253686189186e-07, "nan": 0, "inf": 0}
+{"step": 990, "kind": "action", "max_finite_abs": 0.005960132926702499, "nan": 0, "inf": 0}
+{"step": 990, "kind": "observation", "max_finite_abs": 0.0913328155875206, "nan": 0, "inf": 0}
+{"step": 980, "kind": "action", "max_finite_abs": 7987.056640625, "nan": 0, "inf": 0}
+{"step": 980, "kind": "observation", "max_finite_abs": 122392.609375, "nan": 0, "inf": 0}
+{"step": 970, "kind": "action", "max_finite_abs": 10703263744.0, "nan": 0, "inf": 0}
+{"step": 970, "kind": "observation", "max_finite_abs": 164015407104.0, "nan": 0, "inf": 0}
+{"step": 960, "kind": "action", "max_finite_abs": 1.4343189313880064e+16, "nan": 0, "inf": 0}
+{"step": 960, "kind": "observation", "max_finite_abs": 2.1979316466640486e+17, "nan": 0, "inf": 0}
+{"step": 950, "kind": "action", "max_finite_abs": 1.9220964641050255e+22, "nan": 0, "inf": 0}
+{"step": 950, "kind": "observation", "max_finite_abs": 2.945395409272891e+23, "nan": 0, "inf": 0}
+{"step": 940, "kind": "action", "max_finite_abs": 2.575755296263564e+28, "nan": 0, "inf": 0}
+{"step": 940, "kind": "observation", "max_finite_abs": 3.947053642762568e+29, "nan": 0, "inf": 0}
+{"step": 930, "kind": "action", "max_finite_abs": 3.4517088450461765e+34, "nan": 0, "inf": 0}
+{"step": 930, "kind": "observation", "max_finite_abs": 5.289353734459677e+35, "nan": 0, "inf": 0}
+{"step": 925, "kind": "observation", "max_finite_abs": 1.1656258206158447e+38, "nan": 0, "inf": 1}

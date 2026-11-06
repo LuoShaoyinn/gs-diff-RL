@@ -1,0 +1,1122 @@
+[
+  {
+    "start_substep": 3900,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.148939418271766e-06,
+      "replayed_max_abs": 1.148939418271766e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4858006579743233e-05,
+      "replayed_max_abs": 1.4858006579743233e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3800,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1478166470624274e-06,
+      "replayed_max_abs": 1.1478166470624274e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.490129125159001e-05,
+      "replayed_max_abs": 1.490129125159001e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3700,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669650794938207,
+      "replayed_max_abs": 0.0016669650794938207,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.148885530710686e-06,
+      "replayed_max_abs": 1.148885530710686e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4953201571188401e-05,
+      "replayed_max_abs": 1.4953201571188401e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3600,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1469103355921106e-06,
+      "replayed_max_abs": 1.1469103355921106e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4901444046699908e-05,
+      "replayed_max_abs": 1.4901444046699908e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3500,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669639153406024,
+      "replayed_max_abs": 0.0016669639153406024,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1475323162812856e-06,
+      "replayed_max_abs": 1.1475323162812856e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4845851183054037e-05,
+      "replayed_max_abs": 1.4845851183054037e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3400,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.149033323599724e-06,
+      "replayed_max_abs": 1.149033323599724e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.485270058765309e-05,
+      "replayed_max_abs": 1.485270058765309e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3300,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669650794938207,
+      "replayed_max_abs": 0.0016669650794938207,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1486962421258795e-06,
+      "replayed_max_abs": 1.1486962421258795e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4908121556800324e-05,
+      "replayed_max_abs": 1.4908121556800324e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3200,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669647302478552,
+      "replayed_max_abs": 0.0016669647302478552,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1467564036138356e-06,
+      "replayed_max_abs": 1.1467564036138356e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4895750609866809e-05,
+      "replayed_max_abs": 1.4895750609866809e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3100,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669650794938207,
+      "replayed_max_abs": 0.0016669650794938207,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1478223314043134e-06,
+      "replayed_max_abs": 1.1478223314043134e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4857875612506177e-05,
+      "replayed_max_abs": 1.4857875612506177e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 3000,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669647302478552,
+      "replayed_max_abs": 0.0016669647302478552,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1488335758258472e-06,
+      "replayed_max_abs": 1.1488335758258472e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4901534996170085e-05,
+      "replayed_max_abs": 1.4901534996170085e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2900,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669643810018897,
+      "replayed_max_abs": 0.0016669643810018897,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1455101684987312e-06,
+      "replayed_max_abs": 1.1455101684987312e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4853027096251026e-05,
+      "replayed_max_abs": 1.4853027096251026e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2800,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1466290743555874e-06,
+      "replayed_max_abs": 1.1466290743555874e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4902105249348097e-05,
+      "replayed_max_abs": 1.4902105249348097e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2700,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669646138325334,
+      "replayed_max_abs": 0.0016669646138325334,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.14760894120991e-06,
+      "replayed_max_abs": 1.14760894120991e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4900600035616662e-05,
+      "replayed_max_abs": 1.4900600035616662e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2600,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669650794938207,
+      "replayed_max_abs": 0.0016669650794938207,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1487684332678327e-06,
+      "replayed_max_abs": 1.1487684332678327e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4838531569694169e-05,
+      "replayed_max_abs": 1.4838531569694169e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2500,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1489382814033888e-06,
+      "replayed_max_abs": 1.1489382814033888e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4855193512630649e-05,
+      "replayed_max_abs": 1.4855193512630649e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2400,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1471136076579569e-06,
+      "replayed_max_abs": 1.1471136076579569e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4953015124774538e-05,
+      "replayed_max_abs": 1.4953015124774538e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2300,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1489913731566048e-06,
+      "replayed_max_abs": 1.1489913731566048e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4953015124774538e-05,
+      "replayed_max_abs": 1.4953015124774538e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2200,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669647302478552,
+      "replayed_max_abs": 0.0016669647302478552,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.148771616499289e-06,
+      "replayed_max_abs": 1.148771616499289e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4908544471836649e-05,
+      "replayed_max_abs": 1.4908544471836649e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2100,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1477196721898508e-06,
+      "replayed_max_abs": 1.1477196721898508e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4855262634227984e-05,
+      "replayed_max_abs": 1.4855262634227984e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 2000,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669646138325334,
+      "replayed_max_abs": 0.0016669646138325334,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.147646116805845e-06,
+      "replayed_max_abs": 1.147646116805845e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4846608792140614e-05,
+      "replayed_max_abs": 1.4846608792140614e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1900,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669643810018897,
+      "replayed_max_abs": 0.0016669643810018897,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1490209317344124e-06,
+      "replayed_max_abs": 1.1490209317344124e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4852988897473551e-05,
+      "replayed_max_abs": 1.4852988897473551e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1800,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669649630784988,
+      "replayed_max_abs": 0.0016669649630784988,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1475124210846843e-06,
+      "replayed_max_abs": 1.1475124210846843e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4905869647918735e-05,
+      "replayed_max_abs": 1.4905869647918735e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1700,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669651959091425,
+      "replayed_max_abs": 0.0016669651959091425,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1475124210846843e-06,
+      "replayed_max_abs": 1.1475124210846843e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4907274817232974e-05,
+      "replayed_max_abs": 1.4907274817232974e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1600,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669649630784988,
+      "replayed_max_abs": 0.0016669649630784988,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1488290283523384e-06,
+      "replayed_max_abs": 1.1488290283523384e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4847402781015262e-05,
+      "replayed_max_abs": 1.4847402781015262e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1500,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669647302478552,
+      "replayed_max_abs": 0.0016669647302478552,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1468098364275647e-06,
+      "replayed_max_abs": 1.1468098364275647e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.479077764088288e-05,
+      "replayed_max_abs": 1.479077764088288e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1400,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669647302478552,
+      "replayed_max_abs": 0.0016669647302478552,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1468592902019736e-06,
+      "replayed_max_abs": 1.1468592902019736e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4901762369845528e-05,
+      "replayed_max_abs": 1.4901762369845528e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1300,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669649630784988,
+      "replayed_max_abs": 0.0016669649630784988,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.14780004878412e-06,
+      "replayed_max_abs": 1.14780004878412e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4902002476446796e-05,
+      "replayed_max_abs": 1.4902002476446796e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1200,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001666964846663177,
+      "replayed_max_abs": 0.001666964846663177,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1470079925857135e-06,
+      "replayed_max_abs": 1.1470079925857135e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4901461327099241e-05,
+      "replayed_max_abs": 1.4901461327099241e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1100,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669654287397861,
+      "replayed_max_abs": 0.0016669654287397861,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1473342738099745e-06,
+      "replayed_max_abs": 1.1473342738099745e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4860178453091066e-05,
+      "replayed_max_abs": 1.4860178453091066e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 1000,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669672913849354,
+      "replayed_max_abs": 0.0016669672913849354,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1460033420007676e-06,
+      "replayed_max_abs": 1.1460033420007676e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4862876923871227e-05,
+      "replayed_max_abs": 1.4862876923871227e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 900,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669738106429577,
+      "replayed_max_abs": 0.0016669738106429577,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1569607067940524e-06,
+      "replayed_max_abs": 1.1569607067940524e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4821796867181547e-05,
+      "replayed_max_abs": 1.4821796867181547e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 800,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669725300744176,
+      "replayed_max_abs": 0.0016669725300744176,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.147353259511874e-06,
+      "replayed_max_abs": 1.147353259511874e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4819040188740473e-05,
+      "replayed_max_abs": 1.4819040188740473e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 700,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016669721808284521,
+      "replayed_max_abs": 0.0016669721808284521,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.1343894357196405e-06,
+      "replayed_max_abs": 1.1343894357196405e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.4862864190945402e-05,
+      "replayed_max_abs": 1.4862864190945402e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 600,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.001667757867835462,
+      "replayed_max_abs": 0.001667757867835462,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 4.422384336066898e-06,
+      "replayed_max_abs": 4.422384336066898e-06,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 1.444340705347713e-05,
+      "replayed_max_abs": 1.444340705347713e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 500,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016698195831850171,
+      "replayed_max_abs": 0.0016698195831850171,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 2.604831024655141e-05,
+      "replayed_max_abs": 2.604831024655141e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 3.4100288758054376e-05,
+      "replayed_max_abs": 3.4100288758054376e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 400,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0016746731707826257,
+      "replayed_max_abs": 0.0016746731707826257,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 4.61161216662731e-05,
+      "replayed_max_abs": 4.61161216662731e-05,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0001223253202624619,
+      "replayed_max_abs": 0.0001223253202624619,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 300,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0017913536867126822,
+      "replayed_max_abs": 0.0017913536867126822,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0005383105599321425,
+      "replayed_max_abs": 0.0005383105599321425,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0014519946416839957,
+      "replayed_max_abs": 0.0014519946416839957,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 200,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.002412996953353286,
+      "replayed_max_abs": 0.002412996953353286,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.0041978610679507256,
+      "replayed_max_abs": 0.0041978610679507256,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.007158717606216669,
+      "replayed_max_abs": 0.007158717606216669,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 100,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.011049043387174606,
+      "replayed_max_abs": 0.011049043387174606,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.013240853324532509,
+      "replayed_max_abs": 0.013240853324532509,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 0.0,
+      "original_max_abs": 0.014352802187204361,
+      "replayed_max_abs": 0.014352802187204361,
+      "first_different_substep": null,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0
+    }
+  },
+  {
+    "start_substep": 0,
+    "window_steps": 25,
+    "qpos": {
+      "max_absolute_difference": 4.656612873077393e-10,
+      "original_max_abs": 0.01791013404726982,
+      "replayed_max_abs": 0.01791013404726982,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 4.656612873077393e-10
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 1.862645149230957e-09,
+      "original_max_abs": 0.12613137066364288,
+      "replayed_max_abs": 0.12613137066364288,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 1.1641532182693481e-10
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 1.1920928955078125e-07,
+      "original_max_abs": 3.4541709423065186,
+      "replayed_max_abs": 3.4541709423065186,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 3.026798367500305e-09
+    }
+  }
+]

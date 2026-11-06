@@ -1,0 +1,72 @@
+{
+  "stage": "after_substep",
+  "substep": 3275,
+  "control_step": 818,
+  "adjoints": {
+    "qpos": {
+      "max_finite_abs": 2.8556147035438084e+37,
+      "nan": 0,
+      "inf": 1
+    },
+    "qpos_next": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.vel": {
+      "max_finite_abs": 3.4335033997421323e+37,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.vel_next": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.acc": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.ctrl_force": {
+      "max_finite_abs": 2.216381354419704e+34,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.qf_applied": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.qf_smooth": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "dofs.qf_bias": {
+      "max_finite_abs": 0.0,
+      "nan": 0,
+      "inf": 0
+    },
+    "links.pos": {
+      "max_finite_abs": 5.092597653943384e+27,
+      "nan": 0,
+      "inf": 0
+    },
+    "links.quat": {
+      "max_finite_abs": 3.412472822754226e+37,
+      "nan": 0,
+      "inf": 0
+    },
+    "links.cd_vel": {
+      "max_finite_abs": 3.9550249973856516e+29,
+      "nan": 0,
+      "inf": 0
+    },
+    "links.cd_ang": {
+      "max_finite_abs": 6.125307004430292e+31,
+      "nan": 0,
+      "inf": 0
+    }
+  }
+}

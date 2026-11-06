@@ -46,11 +46,19 @@ def random_resets(seed, count, noise=0.01):
 
 
 class GenesisPendulum:
-    def __init__(self, envs, horizon, substeps=4, requires_grad=True, default_armature=0.0):
+    def __init__(self, envs, horizon, substeps=4, requires_grad=True, default_armature=0.0,
+                 checkpoint_steps=None):
+        self.checkpoint_steps = horizon if checkpoint_steps is None else checkpoint_steps
+        if requires_grad and (self.checkpoint_steps <= 0 or horizon % self.checkpoint_steps):
+            raise ValueError("checkpoint_steps must be a positive divisor of the rollout horizon")
         self.scene = gs.Scene(
             sim_options=gs.options.SimOptions(
                 dt=0.04, substeps=substeps,
-                substeps_local=substeps * horizon if requires_grad else 1,
+                # Genesis reconstructs each checkpoint interval using taped actions.
+                # Long open-loop replays can amplify float32 discrepancies even
+                # when the original feedback rollout is stable. This window sets
+                # replay length only; gradients still cross every checkpoint.
+                substeps_local=substeps * self.checkpoint_steps if requires_grad else 1,
                 requires_grad=requires_grad,
             ),
             rigid_options=gs.options.RigidOptions(enable_collision=False),
@@ -155,6 +163,8 @@ def main():
     parser.add_argument("--iterations", type=int, default=150)
     parser.add_argument("--envs", type=int, default=64)
     parser.add_argument("--horizon", type=int, default=64)
+    parser.add_argument("--checkpoint-steps", type=int,
+                        help="Backward replay interval; must divide horizon. Defaults to horizon; use 25 for 1000 steps")
     parser.add_argument("--substeps", type=int, default=4)
     parser.add_argument("--default-armature", type=float, default=0.0,
                         help="Keep 0 for the benchmark; 0.1 reproduces the initial model mismatch")
@@ -191,12 +201,13 @@ def main():
         "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "training_cost": "mean(x^2 + 10*angle^2 + 0.1*(xdot^2+angledot^2))",
         "control_dt_s": 0.04, "physics_dt_s": 0.04 / args.substeps,
+        "backward_checkpoint_steps": args.horizon if args.checkpoint_steps is None else args.checkpoint_steps,
         "gradient": "full rollout BPTT through Genesis; no critic or internal state detach",
     }
     write_json(out / "config.json", config)
     print(json.dumps({"event": "config", **config}), flush=True)
     env = GenesisPendulum(args.envs, args.horizon, args.substeps,
-                          default_armature=args.default_armature)
+                          default_armature=args.default_armature, checkpoint_steps=args.checkpoint_steps)
     write_json(out / "model_observed.json", {
         "armature": env.robot.get_dofs_armature().cpu().tolist(),
         "damping": env.robot.get_dofs_damping().cpu().tolist(),

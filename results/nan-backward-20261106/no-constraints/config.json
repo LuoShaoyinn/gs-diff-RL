@@ -1,0 +1,21 @@
+{
+  "args": {
+    "checkpoint": "results/public-inverted-pendulum/matched-h128/latest.pt",
+    "horizon": 1000,
+    "envs": 64,
+    "seed": 49,
+    "precision": "32",
+    "disable_constraints": true,
+    "out": "runs/nan-backward/no-constraints"
+  },
+  "pid": 1243762,
+  "cuda_visible_devices": "1",
+  "versions": {
+    "genesis-world": "1.4.5",
+    "quadrants": "1.3.3",
+    "torch": "2.14.1+cu130"
+  },
+  "genesis_path": "/home/luoshaoyinn/diskstation/gs-diff-RL/.venv/lib/python3.12/site-packages/genesis/__init__.py",
+  "checkpoint_sha256": "72217f7ac25369b38972bf76e69f49c627e4e36b3bec5ed79ccd1839b712a588",
+  "instrumentation": "Read-only torch gradient hooks and before/after substep observations; no physics changes"
+}

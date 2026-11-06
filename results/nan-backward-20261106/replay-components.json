@@ -1,0 +1,50 @@
+{
+  "qpos": {
+    "shape": [
+      4001,
+      2,
+      64
+    ],
+    "max_error_first_substep": 4.656612873077393e-10,
+    "original_max_per_component": [
+      0.01791013404726982,
+      0.009900909848511219
+    ],
+    "replayed_max_per_component": [
+      0.09691139310598373,
+      1.5911221504211426
+    ]
+  },
+  "dofs_vel": {
+    "shape": [
+      4001,
+      2,
+      64
+    ],
+    "max_error_first_substep": 1.862645149230957e-09,
+    "original_max_per_component": [
+      0.07247566431760788,
+      0.12613137066364288
+    ],
+    "replayed_max_per_component": [
+      0.22060807049274445,
+      5.530539512634277
+    ]
+  },
+  "dofs_acc": {
+    "shape": [
+      4001,
+      2,
+      64
+    ],
+    "max_error_first_substep": 1.1920928955078125e-07,
+    "original_max_per_component": [
+      1.5976108312606812,
+      3.4541709423065186
+    ],
+    "replayed_max_per_component": [
+      2.770705461502075,
+      593.5384521484375
+    ]
+  }
+}

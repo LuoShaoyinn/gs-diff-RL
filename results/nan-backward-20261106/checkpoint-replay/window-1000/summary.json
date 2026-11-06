@@ -1,0 +1,10 @@
+{
+  "window_steps": 1000,
+  "horizon": 1000,
+  "pid": 1274185,
+  "cuda_visible_devices": "1",
+  "state_cost": 3.2905103580560535e-05,
+  "backward_completed": false,
+  "error": "Nan grad in qpos or dofs_vel found at step 818",
+  "elapsed_s": 18.233380776830018
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "start_substep": 0,
+    "window_steps": 1000,
+    "qpos": {
+      "max_absolute_difference": 1.589455330162309,
+      "original_max_abs": 0.01791013404726982,
+      "replayed_max_abs": 1.5911221504211426,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 1.5698401314439252
+    },
+    "dofs_vel": {
+      "max_absolute_difference": 5.530539448131229,
+      "original_max_abs": 0.12613137066364288,
+      "replayed_max_abs": 5.530539512634277,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.0017969767497589828
+    },
+    "dofs_acc": {
+      "max_absolute_difference": 593.5384522956268,
+      "original_max_abs": 3.4541709423065186,
+      "replayed_max_abs": 593.5384521484375,
+      "first_different_substep": 1,
+      "difference_at_start": 0.0,
+      "difference_at_end": 0.00011607124173451666
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "window_steps": 25,
+  "horizon": 1000,
+  "pid": 1274185,
+  "cuda_visible_devices": "1",
+  "state_cost": 3.2905103580560535e-05,
+  "backward_completed": true,
+  "gradients": {
+    "feedback.weight": [
+      [
+        -2.3670871485137468e-07,
+        1.6288684037135681e-06,
+        6.562584644598246e-07,
+        -6.518916961795185e-07
+      ]
+    ],
+    "feedback.bias": [
+      -0.0011094274232164025
+    ]
+  },
+  "gradients_finite": true,
+  "elapsed_s": 18.767366244923323
+}

@@ -114,7 +114,11 @@ The 1,000-step attempt is a stronger distinction: it fails on the **first**
 gradient evaluation, before any optimizer change or line-search trial. Its
 forward state cost is finite, `3.29051e-5`; Genesis reports a NaN gradient at
 step 818 while reversing the rollout. `failed_rollout.json` preserves the
-unchanged policy and reset seed 49. This proves a reproducible long-rollout
-backward failure in this configuration; it does not identify its internal
-numerical cause. The solved task uses complete gradients through 128-step
-rollouts, not gradients through all 1,000 evaluation steps.
+unchanged policy and reset seed 49. A subsequent
+[checkpoint-replay diagnosis](../nan-backward-20261106/README.md) identifies the
+cause: reconstructing 1,000 steps from taped actions amplifies an initial
+float32 discrepancy until the reconstructed pendulum falls over. Using
+25-step checkpoint intervals preserves the forward loss and completes the
+full 1,000-step backward pass with finite gradients and no detach. The saved
+trained policy above still uses the 64/128-step curriculum; this diagnostic
+does not update its parameters.
